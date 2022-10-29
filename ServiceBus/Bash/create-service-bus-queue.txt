@@ -14,3 +14,5 @@ az servicebus namespace create \
 az servicebus queue create --resource-group $resourceGroupName \
    --namespace-name $namespaceName \
    --name $queueName
+
+az group delete --name test-service-bus-rg-11 --no-wait
