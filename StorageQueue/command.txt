@@ -1,7 +1,7 @@
 resourceGroupName="queue-storage-test-rg"
-storageAccountName="mizanteststorageaccount"
+storageAccountName="mizanqueuteststacc"
 location="eastus"
 
 az group create --name $resourceGroupName --location $location
 
-az storage account create --name storageAccountName --resource-group $resourceGroupName --location $location --sku Standard_LRS --kind StorageV2
+az storage account create --name $storageAccountName --resource-group $resourceGroupName --location $location --sku Standard_LRS --kind StorageV2

@@ -7,8 +7,8 @@ public class Program
 {
     public static async Task Main()
     {
-        string connectionString = "";
-        string queueName = "";
+        string connectionString = "DefaultEndpointsProtocol=https;AccountName=mizanqueuteststacc;AccountKey=WoXLZIiX0Ip1D/+FaRHEcKKiIxnqyHKTwalsmE9C72yZkdZJ0aa2PTVz7uIIxOkdE4mdzjEncJPM+AStZ6xAgw==;EndpointSuffix=core.windows.net";
+        string queueName = "mizan-test-queue";
 
         QueueClient  queueClient = new QueueClient(connectionString, queueName);
         queueClient.CreateIfNotExists();
