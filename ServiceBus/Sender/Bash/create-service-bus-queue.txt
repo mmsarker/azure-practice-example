@@ -1,0 +1,16 @@
+locationName='eastUS'
+namespaceName=test-service-bus-namespace-11
+resourceGroupName=test-service-bus-rg-11
+queueName=test-queue-name-11
+
+az group create --name $resourceGroupName --location $locationName
+
+az servicebus namespace create \
+    --resource-group $resourceGroupName \
+    --name $namespaceName \
+    --location $locationName
+
+
+az servicebus queue create --resource-group $resourceGroupName \
+   --namespace-name $namespaceName \
+   --name $queueName
